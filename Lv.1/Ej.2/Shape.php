@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-class Shape{
+abstract class Shape{
     protected int $altura;
     protected int $ancho;
 
@@ -9,6 +9,8 @@ class Shape{
         $this->altura = $altura;
         $this->ancho = $ancho;
     }
+
+    abstract public function calcularArea(): int;
 }
 
 ?>

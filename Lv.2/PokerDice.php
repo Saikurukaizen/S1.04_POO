@@ -2,17 +2,16 @@
 declare(strict_types=1);
 
 class PokerDice{
-    private array $faces = ['As', 'K', 'Q', 'J', '7', '8'];
+    private static array $faces = ['As', 'K', 'Q', 'J', '7', '8'];
     private string $lastRoll = '';
     private int $totalThrows = 0;
     private static int $totalCount = 0;
     
-    public function throw(): string{
-        $roll = array_rand($this->faces);
-        $this->lastRoll = $this->faces[$roll];
+    public function throw(): void{
+        $roll = array_rand(self::$faces);
+        $this->lastRoll = self::$faces[$roll];
         $this->totalThrows++;
         self::$totalCount++;
-        return $this->lastRoll;
     }
 
     public function shapeName(): string{
