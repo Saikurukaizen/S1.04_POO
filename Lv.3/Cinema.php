@@ -39,7 +39,7 @@ class Cinema{
     public function mostrarPeliculas(): void{
         echo "Películas que disponemos en " .$this->nombre. " en " .$this->poblacion. PHP_EOL;
         foreach($this->peliculas as $pelicula){
-            echo $pelicula->__toString() . PHP_EOL;
+            echo $pelicula . PHP_EOL;
         }
     }
 
