@@ -12,7 +12,7 @@ class Employee{
     }
 
     public function print(): void{
-        if($this->sou <= 6000){
+        if($this->sou < 6000){
             echo '<h2>El empleado '.$this->nombre.' no ha de pagar impuestos</h2>' . PHP_EOL;
         }
         else{
